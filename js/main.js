@@ -11,8 +11,8 @@
     console.log("Fight!!!");                                // to verified that everything is set up correctly
         //creating global variables
         //player name
-    var playerOneName = "Spiderman";                        //defining player one
-    var playerTwoName = "Batman";                           //defining player two
+    var playerOneName = "Thor";                        //defining player one
+    var playerTwoName = "Captain America";                           //defining player two
 
     //player damage
     var player1Damage = 20;                                 //defining player 1 damage to 20
