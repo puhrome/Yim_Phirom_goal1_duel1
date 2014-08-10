@@ -43,7 +43,7 @@
             //creating equation for player 1 damage
             var f1 = Math.floor(Math.random() * (player1Damage - minDamage1) + minDamage1); //defining variable for f1 to equal to randomized math equation
             //creating equation for player 2 damage
-            var f2 = Math.floor(Math.random() * (player2Damage - minDamage2) + minDamage2); //defining varialbe for f2 to equal to randomized math equation
+            var f2 = Math.floor(Math.random() * (player2Damage - minDamage2) + minDamage2); //defining variable for f2 to equal to randomized math equation
 
             //console.log(f1);                              //print f1 to console to check
             //console.log(f2);                              //print f2 to console to check
