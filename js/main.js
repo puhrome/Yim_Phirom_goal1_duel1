@@ -11,16 +11,16 @@
     console.log("Fight!!!");                                // to verified that everything is set up correctly
         //creating global variables
         //player name
-    var playerOneName = "Thor";                        //defining player one
-    var playerTwoName = "Captain America";                           //defining player two
+    var fighterOne = ["Thor", 20, 100];                        //changed variable to fighterOne array literal notations with fighter name, damage, and health
+    var fighterTwo = ["Captain America", 20, 100];                          //changed variable to fighterTwo array literal notations with fighter name, damage, and health
 
     //player damage
-    var player1Damage = 20;                                 //defining player 1 damage to 20
-    var player2Damage = 20;                                 //defining player 2 damage to 20
+   // var player1Damage = 20;                                 //defining player 1 damage to 20
+   // var player2Damage = 20;                                 //defining player 2 damage to 20
 
     //player health
-    var playerOneHealth = 100;                              //defining player one health at 100
-    var playerTwoHealth = 100;                              //defining player two health at 100
+  //  var playerOneHealth = 100;                              //defining player one health at 100
+   // var playerTwoHealth = 100;                              //defining player two health at 100
 
     var round = 0;                                          //assigning variable for fighting rounds
 
@@ -30,27 +30,28 @@
 
 
         //alert box with string concatenation
-        alert(playerOneName+":"+ playerOneHealth+" *START* " +playerTwoName+":"+playerTwoHealth);
+        alert(fighterOne[0] +":"+ fighterOne[2] +" *START* " + fighterTwo[0] +":"+ fighterTwo[2]);
 
 
         for(var i=0; i<10;i++) {                            //for loop, if i is less than 10   // i ++ is adding 1 increment
             //random formula is - Math.floor(Math.random()*(max-min)+min;
             //code to be executed
 
-            var minDamage1 = player1Damage * .5;            //assigning damage to player 1
-            var minDamage2 = player2Damage * .5;            //assigning damage to player 2
+            var minDamage1 = fighterOne[1] * .5;            //assigning damage to fighterOne array index 1
+            var minDamage2 = fighterTwo[1] * .5;            //assigning damage to player 2 to array index 1
 
             //creating equation for player 1 damage
-            var f1 = Math.floor(Math.random() * (player1Damage - minDamage1) + minDamage1); //defining variable for f1 to equal to randomized math equation
+            var f1 = Math.floor(Math.random() * (fighterOne[1] - minDamage1) + minDamage1); //defining variable for f1 to equal to randomized math equation
             //creating equation for player 2 damage
-            var f2 = Math.floor(Math.random() * (player2Damage - minDamage2) + minDamage2); //defining variable for f2 to equal to randomized math equation
+            var f2 = Math.floor(Math.random() * (fighterTwo[1] - minDamage2) + minDamage2); //defining variable for f2 to equal to randomized math equation, changed player 2 to fighterTwo area index 1
 
             //console.log(f1);                              //print f1 to console to check
             //console.log(f2);                              //print f2 to console to check
 
             //inflict damage
-            playerOneHealth -= f1;                          //equation of inflicted damage for player 1
-            playerTwoHealth -= f2;                          //equation for inflicted damage for player 2
+            fighterOne[2] -= f1;                          //assign area index 2 to inflict damage with math.floor equation for fighterOne
+
+            fighterTwo[2] -= f2;                          //assign array index 2 to inflict damage with math.floor equation for fighterTwo
 
 // alert(playerOneName + ": " + playerOneHealth + " " + playerTwoName + ":" + playerTwoHealth); //alert box with string concatenation
 //console.log(playerOneName + ": " + playerOneHealth + " " + playerTwoName + ":" + playerTwoHealth);
@@ -62,7 +63,7 @@
             if (result === "no winner")                     //conditional if else statements //execute if true
             {
                 round++;                                    //
-                alert(playerOneName + ":" + playerOneHealth + "  *ROUND " + round + " OVER" + "*  " + playerTwoName + ":" + playerTwoHealth);                                       //alert both player names, round number and both player health
+                alert(fighterOne[0] + ":" + fighterOne[2] + "  *ROUND " + round + " OVER" + "*  " + fighterTwo[0] + ":" + fighterTwo[2]);                                       //alert both player names, round number and both player health with replacement of variables to array literals
 
             } else {                                        //conditional if else statement //execute if true
                 alert(result);                              //alert results
@@ -76,14 +77,14 @@
     function winnerCheck(){                                 //second function for program to read
         console.log("in winnerCheck FN");                   //print to console
         var result="no winner";                             //assign variable result for no winner
-        if(playerOneHealth<1 && playerTwoHealth<1){         //if playerOneHealth is less than 1 AND playerTwoHealth is also less than one execute statement block
+        if(fighterOne[2]<1 && fighterTwo[2]<1){         //if playerOneHealth is less than 1 AND playerTwoHealth is also less than one execute statement block
             result = "You Both Die";                        //if both statements are true run result
-        }else if(playerOneHealth<1){                        //if statement is true run code, test one
-            result = playerTwoName+" Wins!!!"
-
-        }else if(playerTwoHealth<1){                        //if statement is true run code, test two
-            result = playerOneName+" Wins!!!"
-        }
+        }else if(fighterOne[2]<1){                        //if statement is true run code, test one, replaced variable to array index 2
+            result = fighterTwo[0]+" Wins!!!";
+            //replaced variable to array index 0
+        }else if(fighterTwo[2]<1){                        //if statement is true run code, test two, replaced variable to array index 2
+            result = fighterOne[0]+" Wins!!!"
+        }//replaced variable to array index 0
         return result;                                      //return result after condition
     }
 
