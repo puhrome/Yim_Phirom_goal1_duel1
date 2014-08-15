@@ -1,8 +1,8 @@
 /**
  * Name: Phirom Yim
  * Instructor: Fialishia O Loughlin
- * Date: 8/8/14
- * Assignment: Goal1: Assignment: Duel1
+ * Date: 8/13/14
+ * Assignment: Goal1: Assignment: Duel2
  */
 
 //self-executing function (storage container for variables to use for main part of the code
